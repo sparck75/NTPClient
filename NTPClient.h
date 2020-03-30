@@ -6,7 +6,7 @@
 
 #define SEVENZYYEARS 2208988800UL
 #define NTP_PACKET_SIZE 48
-#define NTP_DEFAULT_LOCAL_PORT 1337
+#define NTP_DEFAULT_LOCAL_PORT 123
 #define LEAP_YEAR(Y)     ( (Y>0) && !(Y%4) && ( (Y%100) || !(Y%400) ) )
 
 
@@ -15,7 +15,7 @@ class NTPClient {
     UDP*          _udp;
     bool          _udpSetup       = false;
 
-    const char*   _poolServerName = "pool.ntp.org"; // Default time server
+    const char*   _poolServerName = "192.168.3.144"; // Default time server
     int           _port           = NTP_DEFAULT_LOCAL_PORT;
     int           _timeOffset     = 0;
 
